@@ -37,56 +37,448 @@
 <!-- Custom Link -->
 <link rel="stylesheet" href="css/style.css" />
 
-<title>Title</title>
+<title>Покер</title>
 
   </head>
 
   <body>
-    <div class="popup popup--online-booking">
+    <div class="popup popup--send">
   <div class="popup__container">
-    <button class="popup__close" type="button" aria-label="Закрыть">
-      <svg width="15" height="15">
-        <use xlink:href="img/sprite.svg#close"></use>
-      </svg>
-    </button>
     <div class="popup__wrapper">
-      <h2 class="popup__title">Онлайн запись</h2>
-      <div class="popup__text">
-        <p>Оставьте ваши данные и мы вам перезвоним.</p>
-      </div>
-
       <form class="form-submit">
-        <div class="form-submit__group">
-          <label class="form-submit__label" for="online-name">Имя</label>
-
-          <input
-            class="form-submit__input"
-            name="name"
-            id="online-name"
-            type="text"
-            placeholder="Введите ваше имя"
-            required
-          />
+        <div class="form-submit__groups">
+          <div class="form-submit__group">
+            <label class="form-submit__label">Определенная сумма</label>
+            <input class="form-submit__input input" type="text" required />
+          </div>
+          <div class="form-submit__group">
+            <button class="form-submit__btn btn btn--gray" type="button">
+              200
+            </button>
+          </div>
         </div>
-        <div class="form-submit__group">
-          <label class="form-submit__label" for="online-tel">
-            Контактный телефон
-          </label>
+        <div class="form-submit__groups flex-col">
+          <div class="form-submit__group">
+            <label class="form-submit__label">Размер комиссии</label>
+            <input class="form-submit__input input" type="text" required />
+          </div>
 
-          <input
-            class="form-submit__input"
-            name="tel"
-            id="online-tel"
-            type="tel"
-            placeholder="+7 (___) ___-__-__"
-            required
-          />
+          <div class="form-submit__group">
+            <label class="custom-file-upload" for="load-img">
+              Загрузить изображение
+              <span></span>
+            </label>
+            <input
+              class="input-file-upload"
+              id="load-img"
+              type="file"
+              multiple
+            />
+          </div>
         </div>
 
-        <button class="form-submit__btn btn" type="button">
-          Заказать звонок
+        <div class="form-submit__group">
+          <label class="form-submit__label">Комментарий</label>
+          <textarea
+            class="form-submit__input form-submit__input--textarea input"
+          >
+          </textarea>
+        </div>
+
+        <button
+          class="form-submit__btn form-submit__btn--submit btn"
+          type="button"
+        >
+          Отправить
         </button>
       </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--create-left">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label">Отправитель перевода</label>
+          <select class="select">
+            <option value="1">Выбрать из списка</option>
+            <option value="2">Выбрать из списка</option>
+            <option value="3">Выбрать из списка</option>
+          </select>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">Получатель перевода</label>
+          <select class="select">
+            <option value="1">Выбрать из списка</option>
+            <option value="2">Выбрать из списка</option>
+            <option value="3">Выбрать из списка</option>
+          </select>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">Счет перевода</label>
+          <select class="select">
+            <option value="1">Выбрать из списка</option>
+            <option value="2">Выбрать из списка</option>
+            <option value="3">Выбрать из списка</option>
+          </select>
+        </div>
+        <div class="form-submit__groups">
+          <div class="form-submit__group">
+            <label class="form-submit__label">Сумма</label>
+            <input class="form-submit__input input" type="text" />
+          </div>
+          <div class="form-submit__group">
+            <label class="form-submit__label">Комиссия</label>
+            <input class="form-submit__input input" type="text" />
+          </div>
+        </div>
+
+        <div class="form-submit__group">
+          <label class="form-submit__label">Тип перевода</label>
+          <select class="select">
+            <option value="1">Выбрать из списка</option>
+            <option value="2">Выбрать из списка</option>
+            <option value="3">Выбрать из списка</option>
+          </select>
+        </div>
+
+        <div class="form-submit__group">
+          <label class="custom-file-upload" for="screen">
+            Скриншот
+            <span></span>
+          </label>
+          <input class="input-file-upload" id="screen" type="file" multiple />
+        </div>
+
+        <div class="form-submit__group">
+          <label class="form-submit__label">Комментарий</label>
+          <textarea
+            class="form-submit__input form-submit__input--textarea input"
+          >
+          </textarea>
+        </div>
+
+        <button
+          class="form-submit__btn form-submit__btn--submit btn"
+          type="button"
+        >
+          Создать перевод
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--create-right">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label">Счет операции</label>
+          <select class="select">
+            <option value="1">Выбрать из списка</option>
+            <option value="2">Выбрать из списка</option>
+            <option value="3">Выбрать из списка</option>
+          </select>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">Сумма</label>
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">Тип перевода</label>
+          <select class="select">
+            <option value="1">Выбрать из списка</option>
+            <option value="2">Выбрать из списка</option>
+            <option value="3">Выбрать из списка</option>
+          </select>
+        </div>
+
+        <div class="form-submit__group">
+          <label class="custom-file-upload" for="screen-2">
+            Скриншот
+            <span></span>
+          </label>
+          <input class="input-file-upload" id="screen-2" type="file" multiple />
+        </div>
+
+        <div class="form-submit__group">
+          <label class="form-submit__label">Комментарий</label>
+          <textarea
+            class="form-submit__input form-submit__input--textarea input"
+          >
+          </textarea>
+        </div>
+
+        <button
+          class="form-submit__btn form-submit__btn--submit btn"
+          type="button"
+        >
+          Создать перевод
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--start-game">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <form class="form-submit">
+        <div class="form-submit__groups">
+          <div class="form-submit__group">
+            <input
+              class="form-submit__input input"
+              type="text"
+              placeholder="Дата начала"
+            />
+          </div>
+          <div class="form-submit__group">
+            <input
+              class="form-submit__input input"
+              type="text"
+              placeholder="Время начала"
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <select class="select">
+            <option value="1">Выбрать рум</option>
+            <option value="2">Выбрать рум</option>
+            <option value="3">Выбрать рум</option>
+          </select>
+        </div>
+        <div class="form-submit__group">
+          <input
+            class="form-submit__input input"
+            type="text"
+            placeholder="Введите название турнира"
+          />
+        </div>
+        <div class="form-submit__group">
+          <input
+            class="form-submit__input input"
+            type="text"
+            placeholder="Сумма бай-ина"
+          />
+        </div>
+
+        <div class="form-submit__group">
+          <label class="custom-file-upload" for="screen-lobby">
+            Скриншот лобби
+            <span></span>
+          </label>
+          <input
+            class="input-file-upload"
+            id="screen-lobby"
+            type="file"
+            multiple
+          />
+        </div>
+
+        <div class="form-submit__group">
+          <textarea
+            class="form-submit__input form-submit__input--textarea input"
+            placeholder="Комментарий"
+          >
+          </textarea>
+        </div>
+
+        <button
+          class="form-submit__btn form-submit__btn--submit btn"
+          type="button"
+        >
+          Создать перевод
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--report">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label">Количество рук за месяц</label>
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">EVbb/100 за месяц</label>
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">bb/100 за месяц</label>
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">EVbb/100 за месяц с фильтром</label>
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">EVbb/100 на 100к рук</label>
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label"
+            >EVbb/100 на 100к рук с фильтром</label
+          >
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label"
+            >EVbb/100 на 100к рук в лейтах</label
+          >
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">Скриншоты</label>
+          <button class="form-submit__btn btn btn--gray">+</button>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">Руки</label>
+          <button class="form-submit__btn btn btn--gray">+</button>
+        </div>
+
+        <button
+          class="form-submit__btn form-submit__btn--submit btn"
+          type="button"
+        >
+          Создать перевод
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--fill-data">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <div class="data">
+        <div class="data__row">
+          <div class="data__item">Счет</div>
+          <div class="data__item">Ники</div>
+          <div class="data__item">Данные для перевода</div>
+        </div>
+        <div class="data__row">
+          <div class="data__item">
+            <picture>
+              <source srcset="img/rooms/1.webp" type="image/webp" />
+              <img width="33" height="15" src="img/rooms/1.png" alt="rooms" />
+            </picture>
+            <span>Skrill, $</span>
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="Ник 1" />
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="ivanov@gmail.com" />
+          </div>
+        </div>
+        <div class="data__row">
+          <div class="data__item">
+            <picture>
+              <source srcset="img/rooms/1.webp" type="image/webp" />
+              <img width="33" height="15" src="img/rooms/1.png" alt="rooms" />
+            </picture>
+            <span>Skrill, €</span>
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="Ник 2" />
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="ivanov@gmail.com" />
+          </div>
+        </div>
+        <div class="data__row">
+          <div class="data__item">
+            <picture>
+              <source srcset="img/rooms/2.webp" type="image/webp" />
+              <img width="33" height="15" src="img/rooms/2.png" alt="rooms" />
+            </picture>
+            <span>PS</span>
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="Ник 3" />
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="ivanov@gmail.com" />
+          </div>
+        </div>
+        <div class="data__row">
+          <div class="data__item">
+            <picture>
+              <source srcset="img/rooms/2.webp" type="image/webp" />
+              <img width="33" height="15" src="img/rooms/2.png" alt="rooms" />
+            </picture>
+            <span>PSES</span>
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="Ник 4" />
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="ivanov@gmail.com" />
+          </div>
+        </div>
+        <div class="data__row">
+          <div class="data__item">
+            <picture>
+              <source srcset="img/rooms/3.webp" type="image/webp" />
+              <img width="33" height="15" src="img/rooms/3.png" alt="rooms" />
+            </picture>
+            <span>888</span>
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="Ник 5" />
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="ivanov@gmail.com" />
+          </div>
+        </div>
+      </div>
+      <div class="data__row">
+        <div class="data__item">
+          <picture>
+            <source srcset="img/rooms/4.webp" type="image/webp" />
+            <img width="33" height="15" src="img/rooms/4.png" alt="rooms" />
+          </picture>
+          <span>888</span>
+        </div>
+        <div class="data__item">
+          <input class="input" type="text" value="Ник 5" />
+        </div>
+        <div class="data__item">
+          <input class="input" type="text" value="ivanov@gmail.com" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--data-transfers">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <span class="popup__title">Данные для переводов</span>
+      <div class="data-transfers">
+        <div class="data-transfers__box">
+          <span>Номер счета</span>
+          <b>12345646546544564</b>
+        </div>
+        <div class="data-transfers__box">
+          <span>Номер счета</span>
+          <b>12345646546544564</b>
+        </div>
+        <div class="data-transfers__box">
+          <span>Номер счета</span>
+          <b>12345646546544564</b>
+        </div>
+        <div class="data-transfers__box">
+          <span>Номер счета</span>
+          <b>12345646546544564</b>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -153,7 +545,7 @@
   </div>
   <!-- Mobile Menu -->
 
-  <div class="container">
+  <div class="container-1600">
     <div class="header__wrapper">
       <a class="header__logo logo" href="#">
         <img src="img/logo.png" alt="логотип" />
@@ -182,9 +574,8 @@
   </div>
 </header>
 
-      
-      <main class="main">
-        <section class="tournaments">
+
+      <main class="main"><section class="tournaments">
   <div class="container-1600">
     <div class="tournaments__wrapper">
       <div class="tournaments__cols">
@@ -211,7 +602,12 @@
                   <input class="form-submit__input input" type="text" />
                 </div>
                 <div class="form-submit__group">
-                  <button class="form-submit__btn" type="submit">Submit</button>
+                  <button
+                    class="form-submit__btn btn btn-start-game"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
                 </div>
               </div>
               <div class="form-submit__bottom">
@@ -311,7 +707,12 @@
                   <input class="form-submit__input input" type="text" />
                 </div>
                 <div class="form-submit__group">
-                  <button class="form-submit__btn" type="submit">Submit</button>
+                  <button
+                    class="form-submit__btn btn btn-start-game"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
                 </div>
               </div>
               <div class="form-submit__bottom">
@@ -394,7 +795,7 @@
       <div class="tournaments__top">
         <h2 class="tournaments__title">Игра от себя</h2>
 
-        <button class="tournaments__btn btn" type="button">
+        <button class="tournaments__btn btn btn-start-game" type="button">
           Отправить запрос на игру от себя
         </button>
       </div>
@@ -420,7 +821,7 @@
             <div class="tournaments__item">27</div>
             <div class="tournaments__item from-me">От себя</div>
             <div class="tournaments__item edit-btn">edit</div>
-          </li>       
+          </li>
           <li class="tournaments__row">
             <div class="tournaments__item">08.10.2022</div>
             <div class="tournaments__item">18:30</div>
@@ -456,7 +857,7 @@
             <div class="tournaments__item">27</div>
             <div class="tournaments__item from-me">От себя</div>
             <div class="tournaments__item edit-btn">edit</div>
-          </li>       
+          </li>
           <li class="tournaments__row">
             <div class="tournaments__item">08.10.2022</div>
             <div class="tournaments__item">18:30</div>
@@ -486,9 +887,7 @@
     </div>
   </div>
 </section>
-
-        
-      </main>
+</main>
       <footer class="footer">
   <div class="container">
     <div class="footer__wrapper">
@@ -529,11 +928,3 @@
 
   </body>
 </html>
-
-<!-- <label class="checkbox">
-  <input class="checkbox__input" type="checkbox" required />
-  <span class="checkbox__box"></span>
-  <span class="checkbox__text">
-    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
-  </span> 
-</label> -->
