@@ -5,21 +5,17 @@
 // * ===== Nice Select
 $('select').niceSelect();
 
-//   // * ===== Slider
-//   (function slider() {
-//     const sliderEl = document.querySelector('.works__slider');
-//     new Swiper(sliderEl, {
-//       pagination: {
-//         el: '.swiper-pagination',
-//       },
-//       slidesPerView: 'auto',
-//       spaceBetween: 20,
-//       navigation: {
-//         nextEl: '.works__slider .swiper-button-next',
-//         prevEl: '.works__slider .swiper-button-prev',
-//       },
-//     });
-//   })();
+// * ===== Slider
+(function slider() {
+  const sliderEl = document.querySelector('.cabinet__slider');
+  new Swiper(sliderEl, {
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    slidesPerView: 'auto',
+    spaceBetween: 15,
+  });
+})();
 
 //   // * ===== Slider
 //   (function slider() {
