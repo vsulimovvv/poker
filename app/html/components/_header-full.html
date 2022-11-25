@@ -1,62 +1,6 @@
 <header class="header">
-  <!-- Mobile Menu -->
   <div class="overlay"></div>
 
-  <div class="mobile-menu">
-    <div class="mobile-menu__top">
-      <a class="mobile-menu__logo logo" href="#">
-        <img src="img/logo.png" alt="логотип" />
-      </a>
-      <button
-        class="mobile-menu__close"
-        type="button"
-        aria-label="Закрыть меню"
-      >
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M6 6L18 18"
-            stroke="#f1ebda"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M18 6L6 18"
-            stroke="#f1ebda"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </button>
-    </div>
-
-    <ul class="mobile-menu__list">
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
-      </li>
-      <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#"><span>Пункт меню</span></a>
-      </li>
-    </ul>
-
-    <div class="mobile-menu__btns">
-      <a class="mobile-menu__phone" href="tel:+74994990917">
-        +7 (499) 499 09 17
-      </a>
-      <!-- <button class="mobile-menu__btn btn" type="button">Онлайн запись</button> -->
-    </div>
-  </div>
-  <!-- Mobile Menu -->
 
   <div class="container-1600">
     <div class="header__wrapper">
@@ -64,24 +8,39 @@
         <img src="img/logo.png" alt="логотип" />
       </a>
 
-      <div class="header__user user">
-        <div class="user__inner">
-          <picture>
-            <source srcset="img/user.webp" type="image/webp" />
-            <img
-              width="55"
-              height="55"
-              class="user__img"
-              src="img/user.jpg"
-              alt="user"
-            />
-          </picture>
+      <div class="dropdown" data-dropdown>
+        <div
+          class="header__user user"
+          data-dropdown-button
+        >
+          <div class="user__inner">
+            <picture>
+              <source srcset="img/user.webp" type="image/webp" />
+              <img
+                width="55"
+                height="55"
+                class="user__img"
+                src="img/user.jpg"
+                alt="user"
+              />
+            </picture>
 
-          <div class="user__info">
-            <span class="user__name">Иван Иванов</span>
-            <span class="user__prof">Игрок</span>
+            <div class="user__info">
+              <span class="user__name">Иван Иванов</span>
+              <span class="user__prof">Игрок</span>
+            </div>
           </div>
         </div>
+        <ul class="dropdown-menu">
+          <li class="dropdown-menu__item">
+            <button class="dropdown-menu__link" type="button">Выйти</button>
+          </li>
+          <li class="dropdown-menu__item">
+            <button class="dropdown-menu__link" type="button">
+              Другой аккаунт
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
