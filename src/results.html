@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- nice-select -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+/>
+
+<!-- fancybox -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+/>
+
+<!-- simplebar -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.9/simplebar.min.css"
+/>
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.css" />
+
+<title>Покер</title>
+
+  </head>
+
+  <body>
+    <div class="popup popup--send">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <form class="form-submit">
+        <div class="form-submit__groups">
+          <div class="form-submit__group">
+            <label class="form-submit__label">Определенная сумма</label>
+            <input class="form-submit__input input" type="text" required />
+          </div>
+          <div class="form-submit__group">
+            <button class="form-submit__btn btn btn--gray" type="button">
+              200
+            </button>
+          </div>
+        </div>
+        <div class="form-submit__groups flex-col">
+          <div class="form-submit__group">
+            <label class="form-submit__label">Размер комиссии</label>
+            <input class="form-submit__input input" type="text" required />
+          </div>
+
+          <div class="form-submit__group">
+            <label class="custom-file-upload" for="load-img">
+              Загрузить изображение
+              <span></span>
+            </label>
+            <input
+              class="input-file-upload"
+              id="load-img"
+              type="file"
+              multiple
+            />
+          </div>
+        </div>
+
+        <div class="form-submit__group">
+          <label class="form-submit__label">Комментарий</label>
+          <textarea
+            class="form-submit__input form-submit__input--textarea input"
+          >
+          </textarea>
+        </div>
+
+        <button
+          class="form-submit__btn form-submit__btn--submit btn"
+          type="button"
+        >
+          Отправить
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--create-left">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label">Отправитель перевода</label>
+          <select class="select">
+            <option value="1">Выбрать из списка</option>
+            <option value="2">Выбрать из списка</option>
+            <option value="3">Выбрать из списка</option>
+          </select>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">Получатель перевода</label>
+          <select class="select">
+            <option value="1">Выбрать из списка</option>
+            <option value="2">Выбрать из списка</option>
+            <option value="3">Выбрать из списка</option>
+          </select>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">Счет перевода</label>
+          <select class="select">
+            <option value="1">Выбрать из списка</option>
+            <option value="2">Выбрать из списка</option>
+            <option value="3">Выбрать из списка</option>
+          </select>
+        </div>
+        <div class="form-submit__groups">
+          <div class="form-submit__group">
+            <label class="form-submit__label">Сумма</label>
+            <input class="form-submit__input input" type="text" />
+          </div>
+          <div class="form-submit__group">
+            <label class="form-submit__label">Комиссия</label>
+            <input class="form-submit__input input" type="text" />
+          </div>
+        </div>
+
+        <div class="form-submit__group">
+          <label class="form-submit__label">Тип перевода</label>
+          <select class="select">
+            <option value="1">Выбрать из списка</option>
+            <option value="2">Выбрать из списка</option>
+            <option value="3">Выбрать из списка</option>
+          </select>
+        </div>
+
+        <div class="form-submit__group">
+          <label class="custom-file-upload" for="screen">
+            Скриншот
+            <span></span>
+          </label>
+          <input class="input-file-upload" id="screen" type="file" multiple />
+        </div>
+
+        <div class="form-submit__group">
+          <label class="form-submit__label">Комментарий</label>
+          <textarea
+            class="form-submit__input form-submit__input--textarea input"
+          >
+          </textarea>
+        </div>
+
+        <button
+          class="form-submit__btn form-submit__btn--submit btn"
+          type="button"
+        >
+          Создать перевод
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--create-right">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label">Счет операции</label>
+          <select class="select">
+            <option value="1">Выбрать из списка</option>
+            <option value="2">Выбрать из списка</option>
+            <option value="3">Выбрать из списка</option>
+          </select>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">Сумма</label>
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">Тип перевода</label>
+          <select class="select">
+            <option value="1">Выбрать из списка</option>
+            <option value="2">Выбрать из списка</option>
+            <option value="3">Выбрать из списка</option>
+          </select>
+        </div>
+
+        <div class="form-submit__group">
+          <label class="custom-file-upload" for="screen-2">
+            Скриншот
+            <span></span>
+          </label>
+          <input class="input-file-upload" id="screen-2" type="file" multiple />
+        </div>
+
+        <div class="form-submit__group">
+          <label class="form-submit__label">Комментарий</label>
+          <textarea
+            class="form-submit__input form-submit__input--textarea input"
+          >
+          </textarea>
+        </div>
+
+        <button
+          class="form-submit__btn form-submit__btn--submit btn"
+          type="button"
+        >
+          Создать перевод
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--start-game">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <form class="form-submit">
+        <div class="form-submit__groups">
+          <div class="form-submit__group">
+            <input
+              class="form-submit__input input"
+              type="text"
+              placeholder="Дата начала"
+            />
+          </div>
+          <div class="form-submit__group">
+            <input
+              class="form-submit__input input"
+              type="text"
+              placeholder="Время начала"
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <select class="select">
+            <option value="1">Выбрать рум</option>
+            <option value="2">Выбрать рум</option>
+            <option value="3">Выбрать рум</option>
+          </select>
+        </div>
+        <div class="form-submit__group">
+          <input
+            class="form-submit__input input"
+            type="text"
+            placeholder="Введите название турнира"
+          />
+        </div>
+        <div class="form-submit__group">
+          <input
+            class="form-submit__input input"
+            type="text"
+            placeholder="Сумма бай-ина"
+          />
+        </div>
+
+        <div class="form-submit__group">
+          <label class="custom-file-upload" for="screen-lobby">
+            Скриншот лобби
+            <span></span>
+          </label>
+          <input
+            class="input-file-upload"
+            id="screen-lobby"
+            type="file"
+            multiple
+          />
+        </div>
+
+        <div class="form-submit__group">
+          <textarea
+            class="form-submit__input form-submit__input--textarea input"
+            placeholder="Комментарий"
+          >
+          </textarea>
+        </div>
+
+        <button
+          class="form-submit__btn form-submit__btn--submit btn"
+          type="button"
+        >
+          Создать перевод
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--report">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <form class="form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label">Количество рук за месяц</label>
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label"
+            >EVbb/100 <br />
+            за месяц</label
+          >
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label"
+            >bb/100 <br />
+            за месяц</label
+          >
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label"
+            >EVbb/100 <br />
+            за месяц с фильтром</label
+          >
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label"
+            >EVbb/100 <br />
+            на 100к рук</label
+          >
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label"
+            >EVbb/100 <br />
+            на 100к рук с фильтром</label
+          >
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label"
+            >EVbb/100 <br />
+            на 100к рук в лейтах</label
+          >
+          <input class="form-submit__input input" type="text" />
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">Скриншоты</label>
+          <button class="form-submit__btn btn btn--gray">+</button>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label">Руки</label>
+          <button class="form-submit__btn btn btn--gray">+</button>
+        </div>
+
+        <button
+          class="form-submit__btn form-submit__btn--submit btn"
+          type="button"
+        >
+          Создать перевод
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--fill-data">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <div class="data">
+        <div class="data__row">
+          <div class="data__item">Счет</div>
+          <div class="data__item">Ники</div>
+          <div class="data__item">Данные для перевода</div>
+        </div>
+        <div class="data__row">
+          <div class="data__item">
+            <picture>
+              <source srcset="img/rooms/1.webp" type="image/webp" />
+              <img width="33" height="15" src="img/rooms/1.png" alt="rooms" />
+            </picture>
+            <span>Skrill, $</span>
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="Ник 1" />
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="ivanov@gmail.com" />
+          </div>
+        </div>
+        <div class="data__row">
+          <div class="data__item">
+            <picture>
+              <source srcset="img/rooms/1.webp" type="image/webp" />
+              <img width="33" height="15" src="img/rooms/1.png" alt="rooms" />
+            </picture>
+            <span>Skrill, €</span>
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="Ник 2" />
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="ivanov@gmail.com" />
+          </div>
+        </div>
+        <div class="data__row">
+          <div class="data__item">
+            <picture>
+              <source srcset="img/rooms/2.webp" type="image/webp" />
+              <img width="33" height="15" src="img/rooms/2.png" alt="rooms" />
+            </picture>
+            <span>PS</span>
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="Ник 3" />
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="ivanov@gmail.com" />
+          </div>
+        </div>
+        <div class="data__row">
+          <div class="data__item">
+            <picture>
+              <source srcset="img/rooms/2.webp" type="image/webp" />
+              <img width="33" height="15" src="img/rooms/2.png" alt="rooms" />
+            </picture>
+            <span>PSES</span>
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="Ник 4" />
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="ivanov@gmail.com" />
+          </div>
+        </div>
+        <div class="data__row">
+          <div class="data__item">
+            <picture>
+              <source srcset="img/rooms/3.webp" type="image/webp" />
+              <img width="33" height="15" src="img/rooms/3.png" alt="rooms" />
+            </picture>
+            <span>888</span>
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="Ник 5" />
+          </div>
+          <div class="data__item">
+            <input class="input" type="text" value="ivanov@gmail.com" />
+          </div>
+        </div>
+      </div>
+      <div class="data__row">
+        <div class="data__item">
+          <picture>
+            <source srcset="img/rooms/4.webp" type="image/webp" />
+            <img width="33" height="15" src="img/rooms/4.png" alt="rooms" />
+          </picture>
+          <span>888</span>
+        </div>
+        <div class="data__item">
+          <input class="input" type="text" value="Ник 5" />
+        </div>
+        <div class="data__item">
+          <input class="input" type="text" value="ivanov@gmail.com" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--data-transfers">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <span class="popup__title">Данные для переводов</span>
+      <div class="data-transfers">
+        <div class="data-transfers__box">
+          <span>Номер счета</span>
+          <b>12345646546544564</b>
+        </div>
+        <div class="data-transfers__box">
+          <span>Номер счета</span>
+          <b>12345646546544564</b>
+        </div>
+        <div class="data-transfers__box">
+          <span>Номер счета</span>
+          <b>12345646546544564</b>
+        </div>
+        <div class="data-transfers__box">
+          <span>Номер счета</span>
+          <b>12345646546544564</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--info-block">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <div class="info-block">
+        <div class="info-block__heading">
+          Игрок: <span class="text-orange">RaimbowSlam 1</span> ( Тренер: Иванов,
+          Дата прихода в проект: 05.11.2022, Ранг: 11, Номер группы: 10 )
+        </div>
+
+        <div class="info-block__box">
+          <p class="info-block__text">Отзывы по окончании курса</p>
+
+          <div
+            class="info-block__content"
+            data-simplebar
+            data-simplebar-auto-hide="false"
+          >
+            <div class="info-block__table info-block__table--w-full">
+              <ul class="info-block__list">
+                <li class="info-block__row h-80">
+                  <div class="info-block__item">Дата отзыва</div>
+                  <div class="info-block__item">Дата прихода</div>
+                  <div class="info-block__item">Ранг</div>
+                  <div class="info-block__item">Тренер</div>
+                  <div class="info-block__item">Дата последнего повышения</div>
+                  <div class="info-block__item">
+                    Прогресс за время курса, уровень работы с софтом
+                  </div>
+                  <div class="info-block__item">
+                    Психология, обучаемость, коммуникабельность
+                  </div>
+                  <div class="info-block__item">
+                    Игра в поздних стадиях, переключение скоростей, ИЦМ
+                  </div>
+                  <div class="info-block__item">
+                    Перспективы роста в дальнейшем
+                  </div>
+                  <div class="info-block__item">RFI+реакция на 3бет</div>
+                  <div class="info-block__item">
+                    3bet по позициям IP/OOP, реакция на 4бет, постфлоп, как
+                    агрессор в 3бет потах
+                  </div>
+                  <div class="info-block__item">
+                    DeFF BB и фостфол после него
+                  </div>
+                  <div class="info-block__item">Баррелинг as PFR</div>
+                  <div class="info-block__item">Скрины</div>
+                </li>
+                <li class="info-block__row">
+                  <div class="info-block__item">25.05.21</div>
+                  <div class="info-block__item">15.12.20</div>
+                  <div class="info-block__item">12</div>
+                  <div class="info-block__item">yoggi</div>
+                  <div class="info-block__item">15.12.20</div>
+                  <div class="info-block__item bg-blue">
+                    Удивился, что до сих пор на 12 ранге, потом посмотрел
+                    сколько туров в месяц играет и понял. Понимание у него
+                    хорошее, прогрессирует, самостоятельно.
+                  </div>
+                  <div class="info-block__item bg-blue">
+                    Больше всех задает вопросов между тренами, всегда присылает
+                    раздачи, попросил меня, если будет свободное время,
+                    поработать над игрой совместно
+                  </div>
+                  <div class="info-block__item bg-blue">
+                    Не роводил трену по ицму, но как минимум регулярно смотрит
+                    реплеи финалок
+                  </div>
+                  <div class="info-block__item bg-blue">
+                    Поговорить с ним на счет объемов игры.
+                  </div>
+                  <div class="info-block__item bg-blue">
+                    Открывашки можно чуть нарастить.
+                  </div>
+                  <div class="info-block__item bg-blue">
+                    Мало 3бетит со свободных, на 4беты реакция ок.
+                  </div>
+                  <div class="info-block__item bg-blue">
+                    Общий % дефенда норм.
+                  </div>
+                  <div class="info-block__item bg-blue">
+                    Баррелинг норм, недоблефывает ривер.
+                  </div>
+                  <div class="info-block__item">-</div>
+                </li>
+                <li class="info-block__row">
+                  <div class="info-block__item">25.05.21</div>
+                  <div class="info-block__item">15.12.20</div>
+                  <div class="info-block__item">12</div>
+                  <div class="info-block__item">yoggi</div>
+                  <div class="info-block__item">15.12.20</div>
+                  <div class="info-block__item bg-blue">
+                    Удивился, что до сих пор на 12 ранге, потом посмотрел
+                    сколько туров в месяц играет и понял. Понимание у него
+                    хорошее, прогрессирует, самостоятельно.
+                  </div>
+                  <div class="info-block__item bg-blue"></div>
+                  <div class="info-block__item bg-blue"></div>
+                  <div class="info-block__item bg-blue"></div>
+                  <div class="info-block__item bg-blue"></div>
+                  <div class="info-block__item bg-blue"></div>
+                  <div class="info-block__item bg-blue"></div>
+                  <div class="info-block__item bg-blue"></div>
+                  <div class="info-block__item">-</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-block__boxes">
+          <div class="info-block__box">
+            <p class="info-block__text">Отчеты игрока по месяцам</p>
+
+            <div
+              class="info-block__content"
+              data-simplebar
+              data-simplebar-auto-hide="false"
+            >
+              <div class="info-block__table info-block__table--col-10">
+                <ul class="info-block__list">
+                  <li class="info-block__row">
+                    <div class="info-block__item">Месяц</div>
+                    <div class="info-block__item">Рук за месяц</div>
+                    <div class="info-block__item">
+                      EVbb/100 <br />
+                      за месяц
+                    </div>
+                    <div class="info-block__item">
+                      bb/100 <br />
+                      за месяц
+                    </div>
+                    <div class="info-block__item">
+                      EV BB/100 <br />
+                      filter
+                    </div>
+                    <div class="info-block__item">
+                      EV BB/100 <br />
+                      100k
+                    </div>
+                    <div class="info-block__item">
+                      EVbb/100 100k <br />
+                      filter
+                    </div>
+                    <div class="info-block__item">
+                      EVbb/100 100к <br />
+                      в лейтах
+                    </div>
+                    <div class="info-block__item">Скриншоты</div>
+                    <div class="info-block__item">Руки</div>
+                  </li>
+                  <li class="info-block__row">
+                    <div class="info-block__item">Июль 2021</div>
+                    <div class="info-block__item">30</div>
+                    <div class="info-block__item">9.99</div>
+                    <div class="info-block__item">10.41</div>
+                    <div class="info-block__item">8.45</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">-</div>
+                    <div class="info-block__item">
+                      <a class="download-btn" href="#"> скачать </a>
+                    </div>
+                  </li>
+                  <li class="info-block__row">
+                    <div class="info-block__item">Июль 2021</div>
+                    <div class="info-block__item">30</div>
+                    <div class="info-block__item">9.99</div>
+                    <div class="info-block__item">10.41</div>
+                    <div class="info-block__item">8.45</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">-</div>
+                    <div class="info-block__item">
+                      <a class="download-btn" href="#"> скачать </a>
+                    </div>
+                  </li>
+                  <li class="info-block__row">
+                    <div class="info-block__item">Июль 2021</div>
+                    <div class="info-block__item">30</div>
+                    <div class="info-block__item">9.99</div>
+                    <div class="info-block__item">10.41</div>
+                    <div class="info-block__item">8.45</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">-</div>
+                    <div class="info-block__item">
+                      <a class="download-btn" href="#"> скачать </a>
+                    </div>
+                  </li>
+                  <li class="info-block__row">
+                    <div class="info-block__item">Июль 2021</div>
+                    <div class="info-block__item">30</div>
+                    <div class="info-block__item">9.99</div>
+                    <div class="info-block__item">10.41</div>
+                    <div class="info-block__item">8.45</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">-</div>
+                    <div class="info-block__item">
+                      <a class="download-btn" href="#"> скачать </a>
+                    </div>
+                  </li>
+                  <li class="info-block__row">
+                    <div class="info-block__item">Июль 2021</div>
+                    <div class="info-block__item">30</div>
+                    <div class="info-block__item">9.99</div>
+                    <div class="info-block__item">10.41</div>
+                    <div class="info-block__item">8.45</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">-</div>
+                    <div class="info-block__item">
+                      <a class="download-btn" href="#"> скачать </a>
+                    </div>
+                  </li>
+                  <li class="info-block__row">
+                    <div class="info-block__item">Июль 2021</div>
+                    <div class="info-block__item">30</div>
+                    <div class="info-block__item">9.99</div>
+                    <div class="info-block__item">10.41</div>
+                    <div class="info-block__item">8.45</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">-</div>
+                    <div class="info-block__item">
+                      <a class="download-btn" href="#"> скачать </a>
+                    </div>
+                  </li>
+                  <li class="info-block__row">
+                    <div class="info-block__item">Июль 2021</div>
+                    <div class="info-block__item">30</div>
+                    <div class="info-block__item">9.99</div>
+                    <div class="info-block__item">10.41</div>
+                    <div class="info-block__item">8.45</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">9.49</div>
+                    <div class="info-block__item">-</div>
+                    <div class="info-block__item">
+                      <a class="download-btn" href="#"> скачать </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="info-block__box">
+            <p class="info-block__text">Отзывы предыдущих тренеров</p>
+
+            <div
+              class="info-block__content"
+              data-simplebar
+              data-simplebar-auto-hide="false"
+            >
+              <div class="info-block__table info-block__table--col-4">
+                <ul class="info-block__list">
+                  <li class="info-block__row">
+                    <div class="info-block__item">Дата отзыва</div>
+                    <div class="info-block__item">Тренер</div>
+                    <div class="info-block__item">Игрок</div>
+                    <div class="info-block__item">Отзыв</div>
+                  </li>
+                  <li class="info-block__row">
+                    <div class="info-block__item">06.08.21</div>
+                    <div class="info-block__item">Korepeen</div>
+                    <div class="info-block__item">RaimdowSlam</div>
+                    <div class="info-block__item">
+                      Хорошо схватывает, задает много вопросов по теме +
+                      спрашивает дополнительные моменты
+                    </div>
+                  </li>
+                  <li class="info-block__row">
+                    <div class="info-block__item">06.08.21</div>
+                    <div class="info-block__item">Korepeen</div>
+                    <div class="info-block__item">RaimdowSlam</div>
+                    <div class="info-block__item">
+                      Хорошо схватывает, задает много вопросов по теме +
+                      спрашивает дополнительные моменты
+                    </div>
+                  </li>
+                  <li class="info-block__row">
+                    <div class="info-block__item">06.08.21</div>
+                    <div class="info-block__item">Korepeen</div>
+                    <div class="info-block__item">RaimdowSlam</div>
+                    <div class="info-block__item">
+                      Хорошо схватывает, задает много вопросов по теме +
+                      спрашивает дополнительные моменты
+                    </div>
+                  </li>
+                  <li class="info-block__row">
+                    <div class="info-block__item">06.08.21</div>
+                    <div class="info-block__item">Korepeen</div>
+                    <div class="info-block__item">RaimdowSlam</div>
+                    <div class="info-block__item">
+                      Хорошо схватывает, задает много вопросов по теме +
+                      спрашивает дополнительные моменты
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-block__box">
+          <p class="info-block__text">Динамика рангов</p>
+          <div
+            class="info-block__content"
+            data-simplebar
+            data-simplebar-auto-hide="false"
+          >
+            <div class="info-block__table info-block__table--rank">
+              <ul class="info-block__list">
+                <li class="info-block__row">
+                  <div class="info-block__item">Игрок</div>
+                  <div class="info-block__item">Ноя 20</div>
+                  <div class="info-block__item">Дек 20</div>
+                  <div class="info-block__item">Янв 21</div>
+                  <div class="info-block__item">Фев 21</div>
+                  <div class="info-block__item">Март 21</div>
+                  <div class="info-block__item">Апр 21</div>
+                  <div class="info-block__item">Май 21</div>
+                  <div class="info-block__item">Июнь 21</div>
+                  <div class="info-block__item">Июль 21</div>
+                  <div class="info-block__item">Авг 21</div>
+                  <div class="info-block__item">Сен 21</div>
+                </li>
+                <li class="info-block__row">
+                  <div class="info-block__item">RaimdowSlam</div>
+                  <div class="info-block__item">-</div>
+                  <div class="info-block__item">14</div>
+                  <div class="info-block__item">14</div>
+                  <div class="info-block__item">13</div>
+                  <div class="info-block__item">12</div>
+                  <div class="info-block__item">12(11)</div>
+                  <div class="info-block__item bg-yellow">12(12)</div>
+                  <div class="info-block__item">11(13)</div>
+                  <div class="info-block__item">11(13)</div>
+                  <div class="info-block__item bg-yellow">11.(13)</div>
+                  <div class="info-block__item bg-pink">11.(13)</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="site-wrapper">
+      <header class="header">
+  <div class="overlay"></div>
+
+  <div class="container">
+    <div class="header__wrapper">
+      <a class="header__logo logo" href="#">
+        <img src="img/logo.png" alt="логотип" />
+      </a>
+
+      <div class="dropdown" data-dropdown>
+        <div
+          class="header__user user"
+          data-dropdown-button
+        >
+          <div class="user__inner">
+            <picture>
+              <source srcset="img/user.webp" type="image/webp" />
+              <img
+                width="55"
+                height="55"
+                class="user__img"
+                src="img/user.jpg"
+                alt="user"
+              />
+            </picture>
+
+            <div class="user__info">
+              <span class="user__name">Иван Иванов</span>
+              <span class="user__prof">Игрок</span>
+            </div>
+          </div>
+        </div>
+        <ul class="dropdown-menu">
+          <li class="dropdown-menu__item">
+            <button class="dropdown-menu__link" type="button">Выйти</button>
+          </li>
+          <li class="dropdown-menu__item">
+            <button class="dropdown-menu__link" type="button">
+              Другой аккаунт
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+      
+      <main class="main">
+        <section class="results">
+  <div class="container">
+    <h2 class="results__title">Результаты игроков</h2>
+
+    <div
+      class="results__content"
+      data-simplebar
+      data-simplebar-auto-hide="false"
+    >
+      <div class="results__table">
+        <ul class="results__list">
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+          <li class="results__row">
+            <div class="results__item">
+              Игрок:
+              <button
+                class="player-btn text-orange font-bold font-bold"
+                type="button"
+              >
+                RaimbowSlam 1
+              </button>
+            </div>
+            <div class="results__item">Тренер: <span>Иванов</span></div>
+            <div class="results__item">
+              Дата прихода в проект: <span>05.11.2022</span>
+            </div>
+            <div class="results__item">Ранг: <span> 11</span></div>
+            <div class="results__item">Номер группы: <span>10</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+        
+      </main>
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div>Copyright © 2022</div>
+      <a href="#">Пользовательское соглашение</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- nice-select -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+<!-- fancybox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- simplebar -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.9/simplebar.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>
+
+<!-- <label class="checkbox">
+  <input class="checkbox__input" type="checkbox" required />
+  <span class="checkbox__box"></span>
+  <span class="checkbox__text">
+    Соглашаюсь с<a href="#"> обработкой персональных данных</a>
+  </span> 
+</label> -->

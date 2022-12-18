@@ -1,0 +1,126 @@
+.header {
+  padding: 15px 0;
+  color: #333933;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-white);
+  z-index: 10;
+
+  &.scroll-header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__user {
+    cursor: pointer;
+  }
+
+  .dropdown {
+    position: relative;
+
+    .dropdown-menu {
+      width: 100%;
+      z-index: 10;
+      position: absolute;
+      left: 0;
+      top: calc(100% + 10px);
+      background-color: var(--color-white);
+      padding: 22px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      opacity: 0;
+      pointer-events: none;
+      border-radius: 8px;
+      text-align: left;
+      transform: translateY(-10px);
+      transition: all 250ms ease-in-out;
+
+      &__item {
+        width: 100%;
+      }
+
+      &__link {
+        display: block;
+        width: 100%;
+        transition: 150ms ease;
+        text-align: left;
+        padding: 10px 0;
+
+        &:hover {
+          color: var(--color-orange);
+        }
+      }
+
+      &.active {
+        pointer-events: all;
+        opacity: 1;
+        visibility: hidden;
+      }
+    }
+
+    &.active {
+      .header__user + .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        transform: translateY(0);
+      }
+
+      .header__user--dropdown {
+        &::after {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .user {
+    border: 1px solid rgba(#151a26, 0.2);
+    border-radius: 38px;
+    @include adaptive-value('width', 250, 200, 1);
+    @include adaptive-value('padding', 10, 7, 1);
+
+    &__inner {
+      display: flex;
+      pointer-events: none;
+    }
+
+    &__img {
+      object-fit: cover;
+      flex-shrink: 0;
+      border-radius: 50%;
+      margin-right: 15px;
+
+      @include breakpointsMaxW($bp-768) {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    &__name {
+      color: #151a26;
+      margin-bottom: 10px;
+
+      @include adaptive-value('font-size', 16, 14, 1);
+    }
+
+    &__prof {
+      color: #3d475e;
+      font-size: 12px;
+    }
+  }
+}

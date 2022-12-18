@@ -1,0 +1,24 @@
+@import 'libs';
+@import 'reset';
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'global';
+
+@import './animations';
+
+// * ===== Other components
+@import './components/swiper-options';
+@import './components/popups';
+@import './components/form-submit';
+@import './components/footer';
+@import './components/header';
+@import './components/hero';
+
+// * ===== Section Components
+@import './components/tournaments';
+@import './components/cabinet';
+@import './components/results';
+@import './components/cabinet-selector';
+@import './components/translation';
+@import './components/custom-file';

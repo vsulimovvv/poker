@@ -1,0 +1,196 @@
+.translation {
+  padding: 40px 0;
+
+  &__title {
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #151a26;
+    @include adaptive-value('margin-bottom', 45, 30, 1);
+  }
+
+  &__content {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 315px;
+    gap: 20px;
+    @include adaptive-value('margin-bottom', 45, 30, 1);
+
+    @include breakpointsMaxW($bp-container) {
+      grid-template-columns: 1fr 300px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__table {
+    background-color: var(--color-white);
+
+    @include breakpointsMaxW($bp-991) {
+      width: 900px;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 135px;
+    font-size: 13px;
+    height: 50px;
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+
+    &:nth-child(1) {
+      height: 60px;
+      background-color: #4f7b6f;
+      border-radius: 10px 10px 0px 0px;
+      color: var(--color-white);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #eeeeee;
+    padding: 5px;
+  }
+
+  &__right {
+    .form-submit {
+      padding: 30px;
+      display: grid;
+      gap: 15px;
+      @include adaptive-value('padding', 30, 15, 1);
+    }
+  }
+
+  &__cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 15px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__col {
+    .form-submit {
+      margin-bottom: 25px;
+      padding: 20px;
+      font-size: 15px;
+
+      @include breakpointsMaxW($bp-768) {
+        &__group {
+          width: 100%;
+        }
+      }
+
+      &__btn {
+        padding: 5px;
+        width: 100%;
+
+        &:nth-child(1) {
+          @include breakpointsMaxW($bp-768) {
+            grid-row: 3/4;
+          }
+        }
+      }
+
+      &__input {
+        max-width: 130px;
+        width: 100%;
+
+        @include breakpointsMaxW($bp-container) {
+          max-width: 100px;
+        }
+
+        @include breakpointsMaxW($bp-991) {
+          max-width: 100%;
+        }
+      }
+
+      &__inner {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+        gap: 15px;
+        align-items: center;
+
+        @include breakpointsMaxW($bp-container) {
+          gap: 10px;
+        }
+
+        @include breakpointsMaxW($bp-768) {
+          grid-template-columns: 1fr;
+        }
+
+        &.flex {
+          display: flex;
+          align-items: center;
+
+          @include breakpointsMaxW($bp-768) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          p {
+            flex-shrink: 0;
+
+            @include breakpointsMaxW($bp-768) {
+              width: 100%;
+            }
+          }
+
+          .form-submit__btn {
+            justify-self: start;
+            width: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            @include breakpointsMaxW($bp-768) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .translation-box {
+    &__name {
+      font-size: 15px;
+      line-height: 1;
+      font-weight: 400;
+      color: #4e5055;
+      display: block;
+      margin-bottom: 25px;
+    }
+
+    &__list {
+      background-color: var(--color-white);
+      border-radius: 10px;
+    }
+
+    &__item {
+      height: 35px;
+      width: 100%;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #eeeeee;
+      }
+    }
+  }
+}

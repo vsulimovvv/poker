@@ -1,0 +1,123 @@
+.hero {
+  @include adaptive-value('padding-top', 50, 40, 1);
+  @include adaptive-value('padding-bottom', 50, 40, 1);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.hero-card {
+  height: 460px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background-color: var(--color-white);
+  box-shadow: 0px 18px 106px 0px rgba(55, 55, 55, 0.09);
+  border-radius: 10px;
+  padding: 30px;
+  padding-top: 100px;
+  position: relative;
+  transition: 350ms ease;
+
+  @include adaptive-value('height', 460, 360, 1);
+  @include adaptive-value('padding-top', 100, 50, 1);
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 25px;
+    line-height: 1.2;
+    @include adaptive-value('font-size', 25, 20, 1);
+  }
+
+  &__img {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eeeeee;
+    margin-bottom: 25px;
+
+    img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    font-size: 17px;
+    line-height: 1;
+    font-weight: 400;
+    color: #282828;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    position: relative;
+    margin-top: auto;
+    transition: 300ms ease;
+    z-index: 1;
+
+    &::after {
+      @include elDef();
+      width: 100%;
+      bottom: 0;
+      height: 3px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #dc853d;
+      transition: 300ms ease;
+      z-index: -1;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(55, 55, 55, 0.19),
+      0 6px 6px rgba(55, 55, 55, 0.23);
+
+    transform: scale(0.98);
+
+    .hero-card__btn {
+      color: var(--color-white);
+
+      &::after {
+        height: 100%;
+      }
+    }
+  }
+}
