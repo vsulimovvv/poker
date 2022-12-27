@@ -119,5 +119,7 @@ window.addEventListener('DOMContentLoaded', () => {
     bindModal('.btn-fill-data', '.popup--fill-data', '.popup__close');
     bindModal('.btn-data-transfers', '.popup--data-transfers', '.popup__close');
     bindModal('.player-btn', '.popup--info-block', '.popup__close');
+    bindModal('.btn-add-review', '.popup--new-review', '.popup__close');
+    bindModal('.rooms-card__balance', '.popup--save-balance', '.popup__close');
   })();
 });

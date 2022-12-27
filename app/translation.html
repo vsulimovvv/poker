@@ -508,8 +508,14 @@
     <div class="popup__wrapper">
       <div class="info-block">
         <div class="info-block__heading">
-          Игрок: <span class="text-orange">RaimbowSlam 1</span> ( Тренер: Иванов,
-          Дата прихода в проект: 05.11.2022, Ранг: 11, Номер группы: 10 )
+          <div>
+            Игрок: <span class="text-orange">RaimbowSlam 1</span> ( Тренер:
+            Иванов, Дата прихода в проект: 05.11.2022, Ранг: 11, Номер группы:
+            10 )
+          </div>
+          <button class="btn-add-review btn" type="button">
+            Добавить отзыв
+          </button>
         </div>
 
         <div class="info-block__box">
@@ -855,6 +861,163 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--new-review">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <div class="new-review">
+        <span class="new-review__title">Новый отзыв</span>
+
+        <form class="form-submit">
+          <div class="form-submit__groups">
+            <div class="form-submit__group">
+              <input
+                class="form-submit__input input"
+                type="text"
+                placeholder="Дата отзыва"
+              />
+            </div>
+            <div class="form-submit__group">
+              <input
+                class="form-submit__input input"
+                type="text"
+                placeholder="Дата прихода"
+              />
+            </div>
+            <div class="form-submit__group">
+              <input
+                class="form-submit__input input"
+                type="text"
+                placeholder="Ранг"
+              />
+            </div>
+            <div class="form-submit__group">
+              <input
+                class="form-submit__input input"
+                type="text"
+                placeholder="Тренер"
+              />
+            </div>
+            <div class="form-submit__group">
+              <input
+                class="form-submit__input input"
+                type="text"
+                placeholder="Дата последнего
+                првышения"
+              />
+            </div>
+          </div>
+
+          <div class="form-submit__inputs">
+            <div class="form-submit__group">
+              <textarea
+                class="form-submit__input input"
+                placeholder="Прогресс за время курса, уровень работы с софтом"
+              ></textarea>
+            </div>
+            <div class="form-submit__group">
+              <textarea
+                class="form-submit__input input"
+                placeholder="Психология, обучаемость, коммуникабельность"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-submit__inputs">
+            <div class="form-submit__group">
+              <textarea
+                class="form-submit__input input"
+                placeholder="Игра в поздних стадиях, переключение скоростей, ИЦМ"
+              ></textarea>
+            </div>
+            <div class="form-submit__group">
+              <textarea
+                class="form-submit__input input"
+                placeholder="Перспективы роста в дальнейшем"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-submit__inputs">
+            <div class="form-submit__group">
+              <textarea
+                class="form-submit__input input"
+                placeholder="RFI+реакция на 3бет"
+              ></textarea>
+            </div>
+            <div class="form-submit__group">
+              <textarea
+                class="form-submit__input input"
+                placeholder="Перспективы роста в дальнейшем"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-submit__inputs">
+            <div class="form-submit__group">
+              <textarea
+                class="form-submit__input input"
+                placeholder="DeFF BB и фостфол после него"
+              ></textarea>
+            </div>
+            <div class="form-submit__group">
+              <textarea
+                class="form-submit__input input"
+                placeholder="Баррелинг as PFR"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-submit__group">
+            <label
+              class="custom-file-upload custom-file-upload--screens"
+              for="screens"
+            >
+              Добавить скриншоты <span></span>
+            </label>
+            <input
+              class="input-file-upload"
+              id="screens"
+              type="file"
+              name="screens"
+              multiple
+            />
+          </div>
+
+          <button
+            class="form-submit__btn form-submit__btn--submit btn"
+            type="button"
+          >
+            Опубликовать
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--save-balance">
+  <div class="popup__container">
+    <div class="popup__wrapper">
+      <div class="save-balance">
+        <span class="save-balance__title">PSES</span>
+
+        <form class="form-submit">
+          <div class="form-submit__group">
+            <input class="form-submit__input input" type="text" value="0.00" />
+          </div>
+
+          <button
+            class="form-submit__btn form-submit__btn--submit btn"
+            type="button"
+          >
+            Сохранить
+          </button>
+        </form>
       </div>
     </div>
   </div>
